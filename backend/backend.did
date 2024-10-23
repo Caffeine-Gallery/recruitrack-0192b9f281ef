@@ -1,0 +1,14 @@
+type Interview = 
+ record {
+   company: text;
+   date: int;
+   id: nat;
+   notes: text;
+   position: text;
+ };
+service : {
+  addInterview: (text, text, int, text) -> (nat);
+  deleteInterview: (nat) -> (bool);
+  getAllInterviews: () -> (vec Interview) query;
+  updateInterview: (nat, text, text, int, text) -> (bool);
+}

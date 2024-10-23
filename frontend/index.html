@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan's Recruiter Interview Tracker</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ryan's Recruiter Interview Tracker</h1>
+        <form id="interviewForm">
+            <input type="text" id="company" placeholder="Company" required>
+            <input type="text" id="position" placeholder="Position" required>
+            <input type="datetime-local" id="date" required>
+            <textarea id="notes" placeholder="Notes"></textarea>
+            <button type="submit">Add Interview</button>
+        </form>
+        <div id="interviewList"></div>
+    </div>
+    <div id="loadingSpinner" class="loading-spinner hidden">
+        <i data-feather="loader"></i>
+    </div>
+    <script type="module" src="index.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
